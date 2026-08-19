@@ -48,7 +48,8 @@ section, #credits {
 }
 
 .quote {
-  color: rgb(255, 0, 0);
+  color: rgba(54, 26, 239, 0.862);
+  font-family: "Authentic Bold", sans-serif;
     font-size: 30px;
     text-align: center;
     width: 80%;
