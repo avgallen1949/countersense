@@ -40,7 +40,7 @@ body {
 
 section, #credits {
     mix-blend-mode: color-dodge;
-    color: #6a3f1e;
+    color: #745d25;
 }
 
 .indented-text {
@@ -76,7 +76,7 @@ a {
 }
 
 a:hover {
-    color: #6a3f1e;
+    color: #745d25;
 }
 
 ul {
@@ -95,7 +95,7 @@ ul {
 }
 
 .fn-ref:hover {
-    color: #fff200;
+    color: #745d25;
 }
 
 /* counter */
@@ -111,7 +111,7 @@ ul {
 }
 
 .fn-back:hover {
-    color: #fff200;
+    color: #745d25;
 }
 
 .footnotes-list {
