@@ -24,13 +24,13 @@ body {
     width: 60vw;
     counter-reset: footnote-counter;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     height: auto;
 }
 
 .bold {
     font-family: "Authentic Bold", sans-serif;
-    color: rgba(54, 26, 239, 0.766);
+    color: rgb(26, 40, 239);
 }
 
 .gap {
@@ -40,7 +40,7 @@ body {
 
 section, #credits {
     mix-blend-mode: color-dodge;
-    color: #f04923;
+    color: #fff200;
 }
 
 .indented-text {
@@ -48,7 +48,7 @@ section, #credits {
 }
 
 .quote {
-  color: rgba(54, 26, 239, 0.862);
+    color: rgb(26, 40, 239);
   font-family: "Authentic Bold", sans-serif;
     font-size: 30px;
     text-align: center;
@@ -66,12 +66,14 @@ section, #credits {
     font-size: 30px;
     margin-top: 200px;
     margin-bottom: 50px;
-    border-top: 1px solid #f04923;
+    border-top: 1px solid rgb(26, 40, 239);
+;
     padding-top: 10px;
 }
 
 a {
-    color: rgb(255, 0, 0);
+    color: rgb(26, 40, 239);
+    text-decoration: none;
 }
 
 a:hover {
@@ -90,7 +92,7 @@ ul {
   vertical-align: super;
   line-height: 0;
   margin-left: 0.15em;
-  color: rgb(255, 0, 0);
+color: rgb(26, 40, 239);
 }
 
 .fn-ref:hover {
@@ -106,7 +108,7 @@ ul {
 .fn-back {
   text-decoration: none;
   margin-left: 0.5rem;
-  color: rgb(255, 0, 0);
+    color: rgb(26, 40, 239);
 }
 
 .fn-back:hover {
@@ -120,7 +122,8 @@ ul {
 }
 
 li {
-    border-top: 1px solid #f04923;
+    border-top: 1px solid rgb(26, 40, 239);
+;
     padding-top: 10px;
     margin-top: 10px;
 }
