@@ -77,7 +77,7 @@ a {
 }
 
 a:hover {
-    color: #f04923;
+    color: #fff200;
 }
 
 ul {
@@ -96,7 +96,7 @@ color: rgb(26, 40, 239);
 }
 
 .fn-ref:hover {
-    color: #f04923;
+    color: #fff200;
 }
 
 /* counter */
@@ -112,7 +112,7 @@ color: rgb(26, 40, 239);
 }
 
 .fn-back:hover {
-    color: #f04923;
+    color: #fff200;
 }
 
 .footnotes-list {
