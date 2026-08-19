@@ -66,9 +66,8 @@ section, #credits {
     font-size: 30px;
     margin-top: 200px;
     margin-bottom: 50px;
-    color: rgb(0, 21, 255);
-;
     padding-top: 10px;
+    border-top: ;
 }
 
 a {
@@ -77,7 +76,7 @@ a {
 }
 
 a:hover {
-    color: #fff200;
+    color: #6a3f1e;
 }
 
 ul {
