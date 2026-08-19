@@ -30,7 +30,7 @@ body {
 
 .bold {
     font-family: "Authentic Bold", sans-serif;
-    color: rgb(26, 40, 239);
+    color: rgb(0, 21, 255);
 }
 
 .gap {
@@ -40,7 +40,7 @@ body {
 
 section, #credits {
     mix-blend-mode: color-dodge;
-    color: #fff200;
+    color: #d94f10;
 }
 
 .indented-text {
@@ -48,7 +48,7 @@ section, #credits {
 }
 
 .quote {
-    color: rgb(26, 40, 239);
+    color: rgb(0, 21, 255);
   font-family: "Authentic Bold", sans-serif;
     font-size: 30px;
     text-align: center;
@@ -66,13 +66,13 @@ section, #credits {
     font-size: 30px;
     margin-top: 200px;
     margin-bottom: 50px;
-    border-top: 1px solid rgb(26, 40, 239);
+    color: rgb(0, 21, 255);
 ;
     padding-top: 10px;
 }
 
 a {
-    color: rgb(26, 40, 239);
+    color: rgb(0, 21, 255);
     text-decoration: none;
 }
 
@@ -92,7 +92,7 @@ ul {
   vertical-align: super;
   line-height: 0;
   margin-left: 0.15em;
-color: rgb(26, 40, 239);
+    color: rgb(0, 21, 255);
 }
 
 .fn-ref:hover {
