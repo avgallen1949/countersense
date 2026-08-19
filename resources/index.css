@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "Authentic";
+    src: url("./authentic-sans-90.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Authentic Bold";
+    src: url("./authentic-sans-130.otf") format("opentype");
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Authentic";
+    font-size: 50px;
+    line-height: 1.25;
+    width: 60vw;
+    counter-reset: footnote-counter;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+}
+
+.bold {
+    font-family: "Authentic Bold", sans-serif;
+    color: rgba(54, 26, 239, 0.766);
+}
+
+.gap {
+    height: auto;
+    margin-bottom: 200px;
+}
+
+section, #credits {
+    mix-blend-mode: color-dodge;
+    color: #f04923;
+}
+
+.indented-text {
+    padding-left: 50px;
+}
+
+.quote {
+  color: rgb(255, 0, 0);
+    font-size: 30px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.heading {
+    font-family: "Authentic Bold";
+    font-size: 80px;
+    line-height: 1;
+}
+
+#credits {
+    font-size: 30px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    border-top: 1px solid #f04923;
+    padding-top: 10px;
+}
+
+a {
+    color: rgb(255, 0, 0);
+}
+
+a:hover {
+    color: #f04923;
+}
+
+ul {
+    list-style: none;
+}
+
+/* superscript */
+.fn-ref {
+  counter-increment: footnote-counter;
+  text-decoration: none;
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 0.15em;
+  color: rgb(255, 0, 0);
+}
+
+.fn-ref:hover {
+    color: #f04923;
+}
+
+/* counter */
+.fn-ref::after {
+  content: "[" counter(footnote-counter) "]";
+}
+
+/* back */
+.fn-back {
+  text-decoration: none;
+  margin-left: 0.5rem;
+  color: rgb(255, 0, 0);
+}
+
+.fn-back:hover {
+    color: #f04923;
+}
+
+.footnotes-list {
+    margin-bottom: 0px;
+    font-size: 30px;
+    padding-left: 0;
+}
+
+li {
+    border-top: 1px solid #f04923;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 90%;
+        font-size: 30px;
+    }
+
+    .quote {
+        font-size: 20px;
+    }
+
+    .heading {
+        font-size: 40px;
+        line-height: 1.2;
+        font-family: "Authentic Bold";
+    }
+
+    .footnotes-list, #credits {
+        font-size: 20px;
+    }
+
+}
