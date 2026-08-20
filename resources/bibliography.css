@@ -1,0 +1,280 @@
+:root {
+  --blue: rgb(0, 21, 255);
+  --gold: #745d25;
+
+  --filter-height: 2.5rem;
+}
+
+@font-face {
+    font-family: "Authentic";
+    src: url("./authentic-sans-90.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Authentic Bold";
+    src: url("./authentic-sans-130.otf") format("opentype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100vw;
+  overflow-y: hidden;
+  transition: .25 ease;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Authentic Bold", sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  width: auto;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--blue);
+  overflow-wrap: break-word;
+  transition: .25s ease;
+}
+
+li a:hover {
+  color: rgb(0, 21, 255);
+}
+
+.bold {
+    font-family: "Authentic Bold", sans-serif;
+    color: rgb(0, 21, 255);
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 50px;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+#main-structure {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  color: var(--gold);
+  mix-blend-mode: color-dodge;
+}
+
+#left {
+  flex: 1 1 47vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#entries {
+  flex: 1 1 47vw;
+  position: relative;
+  height: 103vh;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+
+#entries li {
+    padding-left: 10px;
+}
+
+#entries section {
+  width: 100%;
+}
+
+.heading {
+  font-family: "Authentic Bold", sans-serif;
+  font-size: 50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: var(--gold);
+  margin-top: -10px;
+}
+
+.bold {
+  font-family: "Authentic Bold", sans-serif;
+  color: var(--blue);
+}
+
+.year,
+.author,
+.medium {
+  font-size: 10px;
+  padding-left: 5px;
+}
+
+.title-link {
+  color: #745d25;
+  text-decoration: none;
+  transition: ease-in-out 0.2s;
+}
+
+#blue {
+  position: sticky;
+  top: 0px;
+  background-color: var(--blue);
+  color: var(--color2);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#blue li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hover-text {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 400px;
+  padding: 20px;
+  background-color: var(--blue);
+  color: var(--color2);
+  font-size: 16px;
+  pointer-events: none;
+  text-transform: lowercase;
+}
+
+.title-link:hover ~ .hover-text {
+  display: block;
+}
+
+#filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#filter a {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid var(--blue);
+  border-radius: 15px;
+  text-align: center;
+  transition: ease-in-out 0.3s;
+}
+
+#filter a:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+  color: var(--gold);
+}
+
+#filter a[selected] {
+  font-weight: bold;
+  color: var(--gold);
+}
+
+a {
+    transition: .25s ease;
+}
+
+
+@media (max-width: 1080px) {
+  #main-structure {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: 100dvh;
+    padding-bottom: calc(var(--filter-height) + env(safe-area-inset-bottom));
+  }
+
+  #left {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+  }
+
+  #entries {
+    flex: 1 1 auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 10px;
+  }
+
+  #entries section {
+    width: 90%;
+    margin-left: 10px;
+  }
+
+  .heading {
+    font-size: 50px;
+  }
+
+  #blue {
+    top: 0;
+    left: 0;
+    margin-left: -10px;
+    margin-bottom: 15px;
+    width: 120%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #blue li {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 6px 8px;
+    border-bottom: none;
+    padding-left:20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+#entries {
+    margin-bottom: 50px;
+}
+.title-link:hover ~ .hover-text {
+  display: none;
+}
+
+}

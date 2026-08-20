@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: "Authentic";
+    font-family: "Authentic Bold";
     font-size: 50px;
     line-height: 1.25;
     width: 60vw;
@@ -49,7 +49,7 @@ section, #credits {
 
 .quote {
     color: rgb(0, 21, 255);
-  font-family: "Authentic Bold", sans-serif;
+    font-family: "Authentic Bold", sans-serif;
     font-size: 30px;
     text-align: center;
     width: 80%;
@@ -62,17 +62,25 @@ section, #credits {
     line-height: 1;
 }
 
+#bib {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: rgb(0, 21, 255);
+    mix-blend-mode: color-dodge;
+}
+
 #credits {
     font-size: 30px;
     margin-top: 200px;
     margin-bottom: 50px;
     padding-top: 10px;
-    border-top: ;
 }
 
 a {
     color: rgb(0, 21, 255);
     text-decoration: none;
+    transition: .25s ease;
 }
 
 a:hover {
@@ -122,7 +130,6 @@ ul {
 
 li {
     border-top: 1px solid rgb(26, 40, 239);
-;
     padding-top: 10px;
     margin-top: 10px;
 }
@@ -147,4 +154,8 @@ li {
         font-size: 20px;
     }
 
+    #background-video {
+    top: 0;
+    left: -300px;
+}
 }

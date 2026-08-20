@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" class="">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>countersense bibliography</title>
+   <link rel="stylesheet" href="./resources/bibliography.css">
+   <link rel="icon" type="image/x-icon" href="./resources/"> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="main-structure">
+  <div id="filter"> 
+    <a filter="all" selected>All</a> 
+    <a filter="Sense">Sense</a> 
+    <a filter="Archives">Archives</a> 
+    <a filter="Pedagogy">Pedagogy</a> 
+    <a filter="Agency">Agency</a> 
+    <a filter="Practice">Practice</a> 
+  </div>
+  <section id="left">
+    <div class="bold"><a href="./index.html">countersense</a></div>
+    <div class="heading">bibliography</div>
+  </section>
+   <section id="entries">
+    <ul id="blue">
+      <li>
+        Title <span class="author">Author</span> <span class="year">Format</span>
+      </li>
+    </ul>
+   </section>
+  </div>
+<video id="background-video" src="./resources/yellow_1.mp4" autoplay loop muted playsinline></video>
+
+
+<script>
+  // FILTER 
+$("#filter").on("click", "a[filter]", function(e){
+    e.preventDefault(); 
+    
+    $("#filter a[filter]").removeAttr("selected");
+    
+    $(this).attr("selected", "");
+    
+    let to_filter = $(this).attr("filter");
+    console.log(to_filter);
+    
+    if(to_filter == "all"){
+        $("#entries section").show();
+        return;
+    }
+        $("#entries section").hide();
+    
+    $("#entries section[type='" + to_filter +"']").show();
+});
+
+
+</script>
+
+<script>
+var SPREADSHEET_ID = "1G5F0sqDnr1fuE6pITf8iazIiEAKVq3hmN0ZefQ81Dqc"; 
+var TAB_NAME = "Sheet1";
+
+
+$(document).ready(function () {
+ $.getJSON("https://opensheet.elk.sh/" + SPREADSHEET_ID + "/" + TAB_NAME, function (data) {
+  
+   console.log(data);
+  
+    data.forEach(function (entry, index) {
+    
+     console.log(entry);
+    
+            $(`<section type='` + entry.Type + `'>
+              <ul>
+                <li class="title-text">
+                <a href="` + entry.Link + `" target="_blank" class="title-link">` + entry.Title + `</a>
+                <span class="author">` + entry.Author + `</span>  
+              <span class="medium">` + entry.Medium + `</span>  
+                <p class="hover-text">` + entry.Hover + `</p>
+              </li>
+              </ul>
+            </section>`)
+            .appendTo("#entries");
+   });
+ }); 
+});
+</script>
+    <script>
+$("#entries").on("mousemove", ".title-link", function (e) {
+  var $card = $(this).siblings(".hover-text");
+  if (!$card.length) return;
+
+  var gap = 14;   // distance from cursor to card
+  var edge = 8;   // minimum distance from viewport edge
+
+  var w = $card.outerWidth();
+  var h = $card.outerHeight();
+  var vw = $(window).width();
+  var vh = $(window).height();
+
+  // Horizontal: prefer left of cursor, flip right if it won't fit.
+  var left = e.clientX - gap - w;
+  if (left < edge) left = e.clientX + gap;
+
+  // Vertical: prefer below cursor, flip above if it won't fit.
+  var top = e.clientY + gap;
+  if (top + h > vh - edge) top = e.clientY - gap - h;
+
+  // Clamp, in case neither side fits.
+  left = Math.max(edge, Math.min(left, vw - w - edge));
+  top = Math.max(edge, Math.min(top, vh - h - edge));
+
+  $card.css({ left: left, top: top });
+});
+  </script>
+</body>
+</html>
