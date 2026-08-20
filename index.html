@@ -131,6 +131,16 @@
 <span class="bold"><a href="https://digitalcommons.risd.edu/masterstheses/1639/" target="blank">countersense</a></span> is the MFA thesis of Avrie Allen exploring the creative, political potential of embodied sense-making. She is working on expanding <span class="bold">countersense</span> into a serial publication.
     Site and writing by <a href="https://www.avrie.world" target="_blank">Avrie</a>.</div>
 <video id="background-video" src="./resources/yellow_1.mp4" autoplay loop muted playsinline></video>
+<script>
+    const video = document.getElementById('background-video');
+
+    video.addEventListener('loadedmetadata', () => {
+    const dur = video.duration;
+    if (dur && isFinite(dur)) {
+    video.currentTime = Math.random() * Math.max(0, dur - 5);
+  }
+});
+</script>
 
 </body>
 </html>

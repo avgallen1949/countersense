@@ -6,7 +6,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>countersense bibliography</title>
    <link rel="stylesheet" href="./resources/bibliography.css">
-   <link rel="icon" type="image/x-icon" href="./resources/"> 
+   <link rel="icon" type="image/x-icon" href="./resources/favicon.png">
+  <meta property="og:image" content="https://www.countersense.world/resources/preview.png" />
+  <meta property="og:title" content="countersense" />
+  <meta property="og:description" content="countersense embodies a creative practice of counterhegemonic sense-making." />
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -85,6 +88,18 @@ $(document).ready(function () {
  }); 
 });
 </script>
+
+<script>
+    const video = document.getElementById('background-video');
+
+    video.addEventListener('loadedmetadata', () => {
+    const dur = video.duration;
+    if (dur && isFinite(dur)) {
+    video.currentTime = Math.random() * Math.max(0, dur - 5);
+  }
+});
+</script>
+
     <script>
 $("#entries").on("mousemove", ".title-link", function (e) {
   var $card = $(this).siblings(".hover-text");
