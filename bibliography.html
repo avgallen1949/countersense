@@ -26,11 +26,7 @@
     <div class="heading">bibliography</div>
   </section>
    <section id="entries">
-    <ul id="blue">
-      <li>
-        Title <span class="author">Author</span> <span class="year">Format</span>
-      </li>
-    </ul>
+
    </section>
   </div>
 <video id="background-video" src="./resources/yellow_1.mp4" autoplay loop muted playsinline></video>
@@ -77,10 +73,10 @@ $(document).ready(function () {
             $(`<section type='` + entry.Type + `'>
               <ul>
                 <li class="title-text">
-                <a href="` + entry.Link + `" target="_blank" class="title-link">` + entry.Title + `</a>
                 <span class="author">` + entry.Author + `</span>  
               <span class="medium">` + entry.Medium + `</span>  
-                <p class="hover-text">` + entry.Hover + `</p>
+                <p class="hover-text">` + entry.Hover + `</p><br>
+                <a href="` + entry.Link + `" target="_blank" class="title-link">` + entry.Title + `</a>
               </li>
               </ul>
             </section>`)
@@ -115,6 +111,14 @@ $("#entries").on("mousemove", ".title-link", function (e) {
   top = Math.max(edge, Math.min(top, vh - h - edge));
 
   $card.css({ left: left, top: top });
+});
+
+$("#entries").on("mouseenter", ".title-link", function () {
+  $(this).closest("li").find(".hover-text").addClass("is-visible");
+});
+
+$("#entries").on("mouseleave", ".title-link", function () {
+  $(this).closest("li").find(".hover-text").removeClass("is-visible");
 });
   </script>
 </body>

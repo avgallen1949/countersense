@@ -35,7 +35,7 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: "Authentic Bold", sans-serif;
-  font-size: 20px;
+  font-size: 50px;
   line-height: 1.25;
 }
 
@@ -57,10 +57,12 @@ ul {
 li {
   width: auto;
   margin-bottom: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  margin-top: -20px;
   border-bottom: 1px solid var(--blue);
   overflow-wrap: break-word;
   transition: .25s ease;
+  line-height: 1;
 }
 
 li a:hover {
@@ -107,10 +109,12 @@ li a:hover {
   height: 103vh;
   overflow-y: auto;
   padding-bottom: 50px;
+  border-top: 1px solid rgb(0, 21, 255);
 }
 
 #entries li {
     padding-left: 10px;
+    padding-right: 20px;
 }
 
 #entries section {
@@ -126,16 +130,16 @@ li a:hover {
   margin-top: -10px;
 }
 
-.bold {
-  font-family: "Authentic Bold", sans-serif;
-  color: var(--blue);
-}
 
-.year,
 .author,
 .medium {
-  font-size: 10px;
-  padding-left: 5px;
+  font-size: 15px;
+  line-height: 1;
+  color: rgb(0, 21, 255);
+}
+
+.medium {
+  padding
 }
 
 .title-link {
@@ -144,19 +148,6 @@ li a:hover {
   transition: ease-in-out 0.2s;
 }
 
-#blue {
-  position: sticky;
-  top: 0px;
-  background-color: var(--blue);
-  color: var(--color2);
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-#blue li {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
 
 .hover-text {
   display: none;
@@ -171,7 +162,7 @@ li a:hover {
   text-transform: lowercase;
 }
 
-.title-link:hover ~ .hover-text {
+.hover-text.is-visible {
   display: block;
 }
 
@@ -218,6 +209,7 @@ a {
     flex-wrap: nowrap;
     height: 100vh;
     height: 100dvh;
+    width: 100vw;
     padding-bottom: calc(var(--filter-height) + env(safe-area-inset-bottom));
   }
 
@@ -233,8 +225,6 @@ a {
     height: auto;
     min-height: 0;
     margin: 0;
-    padding-left: 12px;
-    padding-right: 12px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 10px;
@@ -249,32 +239,18 @@ a {
     font-size: 50px;
   }
 
-  #blue {
-    top: 0;
-    left: 0;
-    margin-left: -10px;
-    margin-bottom: 15px;
-    width: 120%;
-    height: auto;
-    overflow: hidden;
-  }
-
-  #blue li {
-    margin-left: 0;
-    margin-bottom: 0;
-    padding: 6px 8px;
-    border-bottom: none;
-    padding-left:20px;
-  }
-
 }
 
 @media (max-width: 600px) {
 #entries {
     margin-bottom: 50px;
 }
-.title-link:hover ~ .hover-text {
-  display: none;
+.hover-text {
+  display: none !important;
+}
+
+#entries li {
+    overflow-y: hidden;
 }
 
 }
