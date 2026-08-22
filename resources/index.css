@@ -31,7 +31,7 @@ body {
 
 .bold {
     font-family: "Authentic Bold", sans-serif;
-    color: rgb(0, 21, 255);
+    color: rgb(36, 54, 255);
 }
 
 .gap {
@@ -49,7 +49,7 @@ section, #credits {
 }
 
 .quote {
-    color: rgb(0, 21, 255);
+    color: rgb(36, 54, 255);
     font-family: "Authentic Bold", sans-serif;
     font-size: 30px;
     text-align: center;
@@ -67,7 +67,7 @@ section, #credits {
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
-    color: rgb(0, 21, 255);
+    color: rgb(36, 54, 255);
     mix-blend-mode: color-dodge;
 }
 
@@ -79,7 +79,7 @@ section, #credits {
 }
 
 a {
-    color: rgb(0, 21, 255);
+    color: rgb(36, 54, 255);
     text-decoration: none;
     transition: .25s ease;
 }
@@ -100,7 +100,7 @@ ul {
   vertical-align: super;
   line-height: 0;
   margin-left: 0.15em;
-    color: rgb(0, 21, 255);
+    color: rgb(36, 54, 255);
 }
 
 .fn-ref:hover {
@@ -116,7 +116,7 @@ ul {
 .fn-back {
   text-decoration: none;
   margin-left: 0.5rem;
-    color: rgb(26, 40, 239);
+    color: rgb(36, 54, 255);
 }
 
 .fn-back:hover {
@@ -130,7 +130,7 @@ ul {
 }
 
 li {
-    border-top: 1px solid rgb(26, 40, 239);
+    color: rgb(36, 54, 255);
     padding-top: 10px;
     margin-top: 10px;
 }
@@ -151,7 +151,7 @@ li {
         font-family: "Authentic Bold";
     }
 
-    .footnotes-list, #credits {
+    .footnotes-list, #credits, #bib {
         font-size: 20px;
     }
 

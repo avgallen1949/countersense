@@ -1,5 +1,6 @@
 :root {
-  --blue: rgb(0, 21, 255);
+  --blue: rgb(36, 54, 255);
+
   --gold: #745d25;
 
   --filter-height: 2.5rem;
@@ -66,12 +67,12 @@ li {
 }
 
 li a:hover {
-  color: rgb(0, 21, 255);
+    color: rgb(36, 54, 255);
 }
 
 .bold {
     font-family: "Authentic Bold", sans-serif;
-    color: rgb(0, 21, 255);
+    color: rgb(36, 54, 255);
     margin-top: 10px;
     margin-left: 20px;
     font-size: 50px;
@@ -110,7 +111,8 @@ li a:hover {
   overflow-y: auto;
   padding-bottom: 50px;
   padding-top: 20px;
-  border-top: 1px solid rgb(0, 21, 255);
+  border-top: 1px solid rgb(36, 54, 255);
+
 }
 
 #entries li {
@@ -136,7 +138,7 @@ li a:hover {
 .medium {
   font-size: 15px;
   line-height: 1;
-  color: rgb(0, 21, 255);
+  color: rgb(36, 54, 255);
 }
 
 .medium {
