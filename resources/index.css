@@ -1,11 +1,15 @@
 @font-face {
-    font-family: "Authentic";
-    src: url("./authentic-sans-90.otf") format("opentype");
+    font-family: "Varianz Sans";
+    src: url("./VZWOVARIANZ-LowSansRegular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Authentic Bold";
-    src: url("./authentic-sans-130.otf") format("opentype");
+    font-family: "Varianz Mix";
+    src: url("./VZWOVARIANZ-MidMixRegular.otf") format("opentype");
+}
+
+html {
+    font-size: 24px;
 }
 
 #background-video {
@@ -17,26 +21,31 @@
     min-height: 100%;
 }
 
-body {
-    font-family: "Authentic Bold";
-    font-size: 50px;
-    line-height: 1.25;
-    width: 60vw;
-    counter-reset: footnote-counter;
-    margin: auto;
-    margin-top: 30px;
-    height: auto;
-    /* text-wrap: pretty; */
+hr {
+    border-color: rgb(36, 54, 255);
 }
 
+body {
+    font-family: "Varianz Sans", Arial, sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.25;
+    counter-reset: footnote-counter;
+    margin: auto;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right:1rem;
+    height: auto;
+}
+
+
 .bold {
-    font-family: "Authentic Bold", sans-serif;
+    font-family: "Varianz Mix", sans-serif;
     color: rgb(36, 54, 255);
 }
 
 .gap {
     height: auto;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 section, #credits {
@@ -50,16 +59,17 @@ section, #credits {
 
 .quote {
     color: rgb(36, 54, 255);
-    font-family: "Authentic Bold", sans-serif;
-    font-size: 30px;
+    font-family: "Varianz Mix", sans-serif;
+    font-size: 2.5rem;
     text-align: center;
-    width: 80%;
+    width: 85%;
     margin: auto;
+    position: relative;
 }
 
 .heading {
-    font-family: "Authentic Bold";
-    font-size: 80px;
+    font-family: "Varianz Mix", sans-serif;
+    font-size: 65px;
     line-height: 1;
 }
 
@@ -78,6 +88,16 @@ section, #credits {
     padding-top: 10px;
 }
 
+#index {
+    position: sticky;
+    top: 50vh;
+    transform: translate(0, -50%);
+}
+
+#current {
+    color: #745d25;
+}
+
 a {
     color: rgb(36, 54, 255);
     text-decoration: none;
@@ -85,7 +105,23 @@ a {
 }
 
 a:hover {
+    color: #f04923;
+}
+
+img {
+    object-fit: contain;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    font-size: 15px;
+    font-family: "Varianz Sans", sans-serif;
     color: #745d25;
+    margin: auto;
+    text-align: center;
+    padding-top: 2rem;
 }
 
 ul {
@@ -104,7 +140,7 @@ ul {
 }
 
 .fn-ref:hover {
-    color: #745d25;
+    color: #f04923;
 }
 
 /* counter */
@@ -120,7 +156,7 @@ ul {
 }
 
 .fn-back:hover {
-    color: #745d25;
+    color: #f04923;
 }
 
 .footnotes-list {
@@ -148,7 +184,7 @@ li {
     .heading {
         font-size: 37px;
         line-height: 1.2;
-        font-family: "Authentic Bold";
+        font-family: "Varianz Mix", sans-serif;
     }
 
     .footnotes-list, #credits, #bib {
