@@ -126,7 +126,7 @@ li a:hover {
 }
 
 .heading {
-  font-family: "Varianz Mix", sans-serif;
+  font-family: "Varianz Sans", sans-serif;
   font-size: 50px;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -150,6 +150,8 @@ li a:hover {
   color: #745d25;
   text-decoration: none;
   transition: ease-in-out 0.2s;
+  font-family: "Varianz Mix", sans-serif;
+  padding-top: 20px;
 }
 
 
