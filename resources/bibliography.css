@@ -7,13 +7,13 @@
 }
 
 @font-face {
-    font-family: "Authentic";
-    src: url("./authentic-sans-90.otf") format("opentype");
+    font-family: "Varianz Sans";
+    src: url("./VZWOVARIANZ-LowSansRegular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Authentic Bold";
-    src: url("./authentic-sans-130.otf") format("opentype");
+    font-family: "Varianz Mix";
+    src: url("./VZWOVARIANZ-MidMixRegular.otf") format("opentype");
 }
 
 *,
@@ -28,6 +28,7 @@ scrollbar-width: none;
   width: 100vw;
   overflow-y: hidden;
   transition: .25 ease;
+  font-size: 24px;
 }
 
 body {
@@ -35,8 +36,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-family: "Authentic Bold", sans-serif;
-  font-size: 50px;
+  font-family: "Varianz Sans", sans-serif;
+  font-size: 1.5rem;
   line-height: 1.25;
 }
 
@@ -58,7 +59,7 @@ ul {
 li {
   width: auto;
   margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   margin-top: -20px;
   border-bottom: 1px solid var(--blue);
   overflow-wrap: break-word;
@@ -71,7 +72,7 @@ li a:hover {
 }
 
 .bold {
-    font-family: "Authentic Bold", sans-serif;
+    font-family: "Varianz Mix", sans-serif;
     color: rgb(36, 54, 255);
     margin-top: 10px;
     margin-left: 20px;
@@ -125,7 +126,7 @@ li a:hover {
 }
 
 .heading {
-  font-family: "Authentic Bold", sans-serif;
+  font-family: "Varianz Mix", sans-serif;
   font-size: 50px;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -178,22 +179,18 @@ li a:hover {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 10px;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 #filter a {
   width: 80px;
-  padding: 5px;
-  border: 1px solid var(--blue);
-  border-radius: 15px;
   text-align: center;
   transition: ease-in-out 0.3s;
 }
 
 #filter a:hover {
   cursor: pointer;
-  background-color: var(--blue);
   color: var(--gold);
 }
 
